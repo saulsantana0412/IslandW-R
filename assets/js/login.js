@@ -14,6 +14,10 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
             window.location.href = "../pages/VistaContenedores.html";
         }
     } else {
-        alert("Nombre de usuario o contraseña incorrectos");
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Nombre de usuario o contraseña incorrectos"
+          });
     }
 });
