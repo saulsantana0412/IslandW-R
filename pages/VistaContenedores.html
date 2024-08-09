@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Contenedores de Basura</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/VistaContenedores.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/c7150968fd.js" crossorigin="anonymous"></script>
+
+    <nav>
+        <a href="../index.html"><img src="../assets/imgs/logo.png" alt="logo"></a>
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+    </nav>
+
+    <main>
+        <h1>¡Ayudanos a tener una ciudad limpia!</h1>
+        <div id="controls">
+            <label for="sector-select">Selecciona un sector:</label>
+            <select id="sector-select">
+                <option value="">Seleccione...</option>
+            </select>
+        </div>
+        <div id="map"></div>
+        <div id="info">
+            <h2>Información del Contenedor</h2>
+            <p><strong>Capacidad:</strong><br><span id="capacidad">&nbsp;</span></p>
+            <p><strong>Horario de Recolección:</strong><br><span id="horario">&nbsp;</span></p>
+            <p><strong>Dias de Recolección:</strong> <br><span id="dias">&nbsp;</span></p>
+        </div>
+    
+    </main>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/VistaContenedores.js"></script>
+</body>
+</html>

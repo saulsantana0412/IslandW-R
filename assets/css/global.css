@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --dark-green: #3F4F0A;
+    --light-green: #919537;
+    --neutral-green: #dfe0c5;
+    --neutral: #F1F1EC;
+    --accent-brown: #A87650;
+    --black: #212121;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+body {
+    background-color: var(--neutral);
+    color: var(--black);
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-size: 2em;
+    color: var(--dark-green);
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 2em;
+    color: var(--dark-green);
+}

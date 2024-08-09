@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island W&R</title>
+    <link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/GestionContenedores.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/c7150968fd.js" crossorigin="anonymous"></script>
+
+    <nav>
+        <a href="../index.html"><img src="../assets/imgs/logo.png" alt="logo"></a>
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+    </nav>
+
+    <main>
+
+    <h1>Administrador de Contenedores de Basura</h1>
+    <div id="controls">
+        <div>
+            <label for="sector-select">Selecciona un sector:</label>
+            <select id="sector-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <button id="add-sector-btn">Agregar Sector</button>
+        </div>
+        <div>
+            <div id="new-sector-container">
+                <input type="text" id="new-sector" placeholder="Nombre del nuevo sector">
+                <button id="save-sector-btn">Guardar Sector</button>
+            </div>
+        </div>
+        
+    </div>
+    <div id="map"></div>
+    <div id="form-container">
+        <h2>Agregar/Editar Contenedor</h2>
+        <form id="container-form">
+            <label for="capacidad">Capacidad:</label>
+            <input type="text" id="capacidad" required><br>
+            <label for="horario">Horario de Recolección:</label>
+            <input type="text" id="horario" required><br>
+            <label for="dias">Días de Recolección:</label>
+            <input type="text" id="dias" required><br>
+            <div class="buttons">
+                <button type="submit">Guardar Contenedor</button>
+                <button type="button" id="delete-container-btn">Eliminar Contenedor</button>
+            </div>
+
+        </form>
+    </div>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/GestionContenedores.js"></script>
+</body>
+</html>
