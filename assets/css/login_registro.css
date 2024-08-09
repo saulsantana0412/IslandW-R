@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1ec;
+    background-image: url('../assets/imgs/fondo1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1ec;
+    background-image: url('../assets/imgs/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #6B8E23;
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #A87650;
+    border-radius: 0;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #8FBC8F;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #3f4f0a, #919537);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #3f4f0a, #3f4f0a);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.forgot-link, .register-link {
+    color: #6B8E23;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link:hover, .register-link:hover {
+    text-decoration: underline;
+}
