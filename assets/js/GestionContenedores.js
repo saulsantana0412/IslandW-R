@@ -61,7 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             saveDataToLocalStorage()
         } else {
-            alert("Por favor, ingrese un nombre para el sector.");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor, ingrese un nombre para el sector."
+              });
         }
     });
 
@@ -109,7 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
             formContainer.style.display = "block";
 
         } else {
-            alert("Por favor, seleccione un sector.");
+            Swal.fire({
+                icon: "question",
+                text: "Por favor, seleccione un sector."
+              });
         }
     });
 
@@ -127,10 +134,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (selectedContainerIndex !== null) {
                 selectedSector.contenedores[selectedContainerIndex] = contenedorData;
-                alert("Contenedor actualizado con éxito.");
+                Swal.fire({
+                    icon: "success",
+                    title: "Éxito",
+                    text: "Contenedor actualizado con éxito."
+                  });
             } else {
                 selectedSector.contenedores.push(contenedorData);
-                alert("Contenedor agregado con éxito.");
+                Swal.fire({
+                    icon: "success",
+                    title: "Éxito",
+                    text: "Contenedor agregado con éxito."
+                  });
             }
 
             loadSectorContainers(selectedSector);
@@ -138,21 +153,31 @@ document.addEventListener("DOMContentLoaded", function () {
             this.reset();
             
         } else {
-            alert("Por favor, complete todos los campos.");
+            Swal.fire({
+                icon: "error",
+                text: "Por favor, complete todos los campos."
+              });
         }
     });
 
     deleteContainerBtn.addEventListener("click", function () {
         if (selectedContainerIndex !== null) {
             selectedSector.contenedores.splice(selectedContainerIndex, 1);
-            alert("Contenedor eliminado con éxito.");
+            Swal.fire({
+                icon: "success",
+                title: "Éxito",
+                text: "Contenedor eliminado con éxito."
+              });
             loadSectorContainers(selectedSector);
             document.getElementById("container-form").reset();
             selectedContainerIndex = null;
 
             saveDataToLocalStorage()
         } else {
-            alert("Seleccione un contenedor para eliminar.");
+            Swal.fire({
+                icon: "question",
+                text: "Seleccione un contenedor para eliminar."
+              });
         }
     });
 });
