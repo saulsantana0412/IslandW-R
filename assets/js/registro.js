@@ -10,7 +10,11 @@ document.getElementById("register-form").addEventListener("submit", function (e)
     const rol = "normal"; // Asignar rol por defecto
 
     if (contrasena !== confirmarContrasena) {
-        alert("Las contraseñas no coinciden");
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Las contraseñas no coinciden"
+          });
         return;
     }
 
@@ -27,6 +31,10 @@ document.getElementById("register-form").addEventListener("submit", function (e)
     users.push(newUser);
     localStorage.setItem('usersData', JSON.stringify(users));
 
-    alert("Registro exitoso. Redirigiendo...");
-    window.location.href = "../pages/VistaContenedores.html"; // Redirigir a la página de usuario
+    Swal.fire({
+        icon: "success",
+        title: "Éxito",
+        text: "Registro exitoso. Redirigiendo..."
+      });
+    window.location.href = "../pages/VistaContenedores.html";
 });
